@@ -1,0 +1,20 @@
+{
+  "name": "ex1",
+  "version": "1.0.0",
+  "description": "A Corona Details of clients Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server\\server.js"
+  },
+  "author": "Ayala Tzuriel",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.1",
+    "mongoose": "^8.2.3",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
