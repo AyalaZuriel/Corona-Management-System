@@ -4,7 +4,7 @@ This is a web application designed to manage client information for a corona man
 
 ## Author:
 
-Ayala Zuriel 325606861
+Ayala Zuriel
 
 ## Table of Contents
 
