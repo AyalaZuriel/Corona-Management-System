@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html> 
+<head>
+    <title>Client Table</title>
+    <link href="style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <h1>Corona Management System</h1>
+    </nav>
+    <div class="navigation">
+        <h2>Manage Clients</h2>
+        <button class="btn" id="openAddFormButton">ADD CLIENT</button>
+    </div>
+    <div class="main">
+
+        <div class="table_container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Address</th>
+                        <th>Phone</th>
+                        <th>Date of Birth</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+        
+        <div id="addClientFormDiv">
+            <i id="closeAddFormButton" class="material-icons">close</i>
+            <h2> ADD NEW CLIENT </h2>
+            <form id="addClientForm" action="index.html">
+                <h3>Personal Details:</h3>
+				<input required name="Id" type="text" placeholder="Enter ID" id="addId">
+				<div class="error" id="idExists"></div>
+				<input required name="First Name" type="text" placeholder="Enter first name" id="addFirstName">
+				<input required name="Last Name" type="text" placeholder="Enter last name" id="addLastName">
+				Address:<input required name="City" type="text" placeholder="Enter city" id="addCity">
+				<input required name="Street" type="text" placeholder="Enter street" id="addStreet">
+				<input required name="Number" type="text" placeholder="Enter number" id="addNumber">
+				Phone:<input required name="Phone" type="text" placeholder="Enter mobile phone" id="addPhone">
+				<input name="Telephone" type="text" placeholder="Enter telephone" id="addTelephone">
+				Date of Birth:<input required name="Date of Birth" type="date" id="addDOB">
+				<h3>Corona Virus Details:</h3>
+				Vaccine Dates and Manufactors: <br/>
+				1.<input name="Vaccine Date" type="date" id="vaccineDate1" class="vaccineDate">
+				<input name="Vaccine Manufacturer" type="text" id="manufactor1" placeholder="Enter vaccine manufacturer" class="vaccineManufacturer">
+				2.<input name="Vaccine Date" type="date"  id="vaccineDate2" class="vaccineDate">
+				<input name="Vaccine Manufacturer" type="text" id="manufactor2" placeholder="Enter vaccine manufacturer" class="vaccineManufacturer">
+				3.<input name="Vaccine Date" type="date"  id="vaccineDate3" class="vaccineDate">
+				<input name="Vaccine Manufacturer" type="text" id="manufactor3" placeholder="Enter vaccine manufacturer" class="vaccineManufacturer">
+				4.<input name="Vaccine Date" type="date"  id="vaccineDate4" class="vaccineDate">
+				<input name="Vaccine Manufacturer" type="text" id="manufactor4" placeholder="Enter vaccine manufacturer" class="vaccineManufacturer">
+				<br/>
+				Positive Result Date:<input name="Positive Result Date" type="date" placeholder="Enter positive result date" id="addPositiveResultDate">
+				Recovery Date:<input name="Recovery Date" type="date" placeholder="Enter recovery date" id="addRecoveryDate">
+				<ul class="error" id="addError"></ul>
+				<input required type="button" id="saveClient" value="SAVE">
+            </form>
+        </div>
+
+        <div id="updateClientFormDiv">
+            <i id="closeUpdateFormButton" class="material-icons">close</i>
+            <h2> UPDATE CLIENT </h2>
+            <form id="updateClientForm" action="index.html">
+                <h3>Personal Details:</h3>
+				<input required name="Id" type="text" placeholder="Enter ID" id="updateId">
+				<div class="error" id="updateIdExists"></div>
+				<input required name="First Name" type="text" placeholder="Enter first name" id="updateFirstName">
+				<input required name="Last Name" type="text" placeholder="Enter last name" id="updateLastName">
+				Address:<input required name="City" type="text" placeholder="Enter city" id="updateCity">
+				<input required name="Street" type="text" placeholder="Enter street" id="updateStreet">
+				<input required name="Number" type="text" placeholder="Enter number" id="updateNumber">
+				Phone:<input required name="Phone" type="text" placeholder="Enter mobile phone" id="updatePhone">
+				<input name="Telephone" type="text" placeholder="Enter telephone" id="updateTelephone">
+				Date of Birth:<input required name="Date of Birth" type="date" id="updateDOB">
+				<h3>Corona Virus Details:</h3>
+				Vaccine Dates and Manufactors: <br/>
+				1.<input name="Vaccine Date" type="date" id="updateVaccineDate1" class="updateVaccineDate">
+                <input name="Vaccine Manufacturer" type="text" id="updateManufactor1" placeholder="Enter vaccine manufacturer" class="updateVaccineManufacturer">
+                2.<input name="Vaccine Date" type="date"  id="updateVaccineDate2" class="updateVaccineDate">
+                <input name="Vaccine Manufacturer" type="text" id="updateManufactor2" placeholder="Enter vaccine manufacturer" class="updateVaccineManufacturer">
+                3.<input name="Vaccine Date" type="date"  id="updateVaccineDate3" class="updateVaccineDate">
+                <input name="Vaccine Manufacturer" type="text" id="updateManufactor3" placeholder="Enter vaccine manufacturer" class="updateVaccineManufacturer">
+                4.<input name="Vaccine Date" type="date"  id="updateVaccineDate4" class="updateVaccineDate">
+                <input name="Vaccine Manufacturer" type="text" id="updateManufactor4" placeholder="Enter vaccine manufacturer" class="updateVaccineManufacturer">
+				<br/>
+				Positive Result Date:<input name="Positive Result Date" type="date" placeholder="Enter positive result date" id="updatePositiveResultDate">
+				Recovery Date:<input name="Recovery Date" type="date" placeholder="Enter recovery date" id="updateRecoveryDate">
+				<ul class="error" id="updateError"></ul>
+				<input required type="button" id="updateClient" value="UPDATE">
+        </form>
+    </div>
+
+    <div id="moreDetailsWindow">
+        <i id="closeDetailsButton" class="material-icons">close</i>
+        <h2> CLIENT CORONA DETAILS</h2>
+        <div id="clientDetailsContainer"></div>
+    </div>
+
+</body>
+</html>
+
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+<script src="script.js"></script>
